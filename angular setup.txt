@@ -1,0 +1,195 @@
+https://www.news18.com/cricketnext/cricket-live-scorecard/england-vs-india-live-score-full-enin08302018184494.html
+INBASDLP02290
+https://github.com/yukti-12/Angualar4-Startup.git
+
+
+first install:
+node js
+
+npm install -g @angular/cli@latest ...globally in command promt.
+----
+to be sure if node js,npm,cli are installed chk out thier version in command prompt
+node -v
+npm -v
+ng v (angular cli version)
+install: visual studio code
+
+
+node verrsion should be higher than angular cli
+node version:10.16
+angular :8
+
+
+
+
+now go to the project where u can create the angular  project (for eg d:, cd divya/)
+then type command as :
+
+d: angular //[ floder name which u have created]
+
+d:angular : ng new angular-tour-of-heroes1  //[create new project inside angular]
+
+
+cd angular-tour-of-heroes1  //[ go inside the project you have created]
+ng serve --open                // [The ng serve command builds the app, starts the development server, watches the source files,
+                                   and rebuilds the app as you make changes to those files. The --open flag opens a browser to http://localhost:4200/.]
+cd src/app/
+
+ng generate interface hero   //  [ if you need to create only one interface ts file]
+
+
+npm install  //to install node modeul folder
+
+npm install angular 
+
+
+ng serve   //[ to compile]
+
+
+https://angular.io/tutorial/toh-pt3
+
+
+
+
+ng generate interface hero //[ [ if you need to create only one service ts file]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+it create a basic angular 4 project with node js.
+
+**install boostarp in angular 4 **
+npn install bootstrap@4.4.3 --save(to install boostrap)
+boostrap:"4.4.0" in package.json
+in angularcli json...under styles key...addd boostrap style path.
+------------
+
+
+
+
+
+main.ts file  - is the first file which angular complier will see (or which angular will kickstart the application) .....in this file the appplication will be boostraped.
+in main.ts there is platformBrowserDynamic, it means that whenever we do some changes in my code it should reflect automatically in front end/browser.
+
+***flow of project ***
+from main.ts(first page)...we will come to know root module that is app.module.ts...
+and from app.module.ts we will come to know root component that is app.component.ts
+
+** one way binding **
+data/property in a class in component, which has to be displayed in view we represent in html page as double curly bracket {{}}
+property class => view {{}} :interpolartion/ one way binding. //  here class to view one way binding
+view [events] => event handler () for eg (click) :  one way binding.  // here view to class one way binding
+
+class to view {{}}
+view to class ()
+
+
+
+** to  change the default port 4200 **
+package.json => ng serve -p 9200
+
+** attribute binding **
+<img src={{img}} >...interpolation..
+or
+<img [src]=img > ....this is call called attribute binding, where attributes are binded with square brackets[]
+
+<button (click)='adduser()'></button> //data flow from dom to component 
+
+
+** ng model with two way binding ** [()]
+<input type="text" [(ngModel)]="">
+
+
+
+**some  syntax**
+user:User //property
+userDetails:User[] //property if u want define with aray
+
+interface User{
+ uesrname:string,
+ roll:number,
+ work:string
+}
+------
+addUser:void(){
+this.userDetails.push(user) // since userdetails is an array u can call push function.
+}
+------
+<input type="text" #frstname>
+<button onclick='adduser(frstname.value)'></button>
+-----
+users:user[]
+-------
+**services**
+sharing data btwn components
+services page is nothing ucc helper pages.
+in app.module.ts.....under providers keys u need to mention services, where it act as a signle to and shares the data btwn tow components.
+
+---
+** filters**
+
+inbuilt pipes--
+{{bday | date : 'fulldate' | lowercase}}
+friday june14 1989
+here date:'fulldate' // u can pass the parameters to in built pipes
+lowercase //only inbuilt pipes
+
+create a filter/pipe (custom pipes) 
+ng g p pipename
+refer pipes---with training power(pipe) power(component)
+{{value | power:exp}} //here power is the
+
+
+----
+**ng generate**
+ng g cl name --class..only one class file (export class name)
+ng g c name ---component
+ng g s name --service--to share data btwn 2 components service is used.
+
+
+index.html- is the first file which angular will render to ui..
+
+polyfill.ts  - angular has got standard ecma script version that is (6 version) EC6...but the browser support EC5...to fill that gap polyfill.ts is used
+angular-cli.json - its a  json file-configuration file of angular cli used in the project
+package.json - all node js dependencies,,like package are included in this file.
+ with production dependencies....key as dependencies
+and developtment dependencies....key as next devDependencies
+----------------------
+
+**lifecyclye hooks**
+implenets ngondestroy  ---it will remive the component from ui.
+
+ITC7/8F/ODC02/WST058
+--------------------------------------------
+
+./ means current working directory
+-------
+What's the difference between tilde(~) and caret(^) in package.json?
+1) the simplest terms, the tilde matches the most recent minor version (the middle number). ~1.2.3 will match all 1.2.x versions but will miss 1.3.0.
+
+2) The caret, on the other hand, is more relaxed. It will update you to the most recent major version (the first number). ^1.2.3 will match any 1.x.x release including 1.3.0, but will hold off on 2.0.0.
+
+---------------------
+
+C:\Users\DX00488010\AppData\Roaming\npm;C:\Program Files\nodejs;C:\Program Files (x86)\Microsoft VS Code\bin;
+
+C:\Users\DX00488010\AppData\Roaming\npm\node_modules\@angular\cli\bin
